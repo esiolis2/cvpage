@@ -60,8 +60,8 @@ export default function Education() {
               </svg>
 
               <div>
-                <h3 className="text-2xl font-bold text-white mb-2">Bachelor of Data Science (discontinued)</h3>
-                <p className="text-purple-400 font-semibold mb-2">RMIT University, Melbourne • 2022</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Bachelor of Data Science</h3>
+                <p className="text-purple-400 font-semibold mb-2">RMIT University, Melbourne • 2022 • (discontinued)</p>
               </div>
             </div>
           </div>
@@ -87,8 +87,8 @@ export default function Education() {
               </svg>
 
               <div>
-                <h3 className="text-2xl font-bold text-white mb-2">Bachelor of Computer Science (discontinued)</h3>
-                <p className="text-purple-400 font-semibold mb-2">Deakin University, Melbourne • 2021</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Bachelor of Computer Science</h3>
+                <p className="text-purple-400 font-semibold mb-2">Deakin University, Melbourne • 2021 • (discontinued)</p>
               </div>
             </div>
           </div>

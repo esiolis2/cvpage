@@ -1,6 +1,11 @@
 'use client'
 
+import { useState } from "react";
+import { FileDown, X } from "lucide-react";
+
 export default function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="min-h-screen flex items-center justify-center relative px-6">
       <div className="text-center z-10">
@@ -70,7 +75,51 @@ export default function Hero() {
               <circle cx="4" cy="4" r="2" />
             </svg>
           </a>
+
+          {/* CV Download Icon */}
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="text-purple-400 hover:text-purple-300 transition-colors"
+          >
+            <FileDown className="w-6 h-6" />
+          </button>
         </div>
+
+        {/* Modal */}
+        {isModalOpen && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white rounded-xl p-6 shadow-xl w-80 text-center relative">
+              {/* Close Button */}
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute top-2 right-2 text-gray-400 hover:text-gray-700"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <h3 className="text-lg font-semibold mb-4 text-gray-800">
+                View or Download Ethan's CV?
+              </h3>
+
+              <div className="flex justify-center space-x-4">
+                <a
+                  href="/Ethan-Siolis-CV.pdf"
+                  target="_blank"
+                  className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition"
+                >
+                  View
+                </a>
+                <a
+                  href="/Ethan-Siolis-CV.pdf"
+                  download
+                  className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md transition"
+                >
+                  Download
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Call to Action */}
         <div className="flex justify-center space-x-4">
@@ -96,5 +145,5 @@ export default function Hero() {
         <path d="m6 9 6 6 6-6" />
       </svg>
     </section>
-  )
+  );
 }
